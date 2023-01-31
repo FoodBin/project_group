@@ -1,6 +1,9 @@
-Group Leader: 
+Group Leader
+=================
 Javier Lim
-Group Member: 
+
+Group Members
+=================
 Gideon Wong
 Dominic (Tan Chin Ming)
 Ang Hong Yit
