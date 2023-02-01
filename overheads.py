@@ -18,16 +18,16 @@ def overheads_function():
         reader = csv.reader(file)
         next(reader) #Skip the header
 
-        #Create a lists to sort the values
+    #Create a lists to sort the values
         List = []
         Highest = []
 
-        #Create a loop to append the new empty lists while sorting the numbers in descending order
+    #Create a loop to append the new empty lists while sorting the numbers in descending order
         for row in reader:
             List.append([float(row[1]),row[0]]) #Change numerical values to a float
             List.sort(reverse=True)
-        
-        #Seperate the highest overhead from the rest into the "Highest" empty list
+ 
+    #Seperate the highest overhead from the rest into the "Highest" empty list
         Highest.append(List[0])
 
     #Create a file path which the text and numbers will be entered into
