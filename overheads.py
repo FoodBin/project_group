@@ -6,7 +6,7 @@ def overheads_function():
     - No parameters is required for this function
     """
 
-    ##Import Overheads CSV file
+    #Import Overheads CSV file
     from pathlib import Path
     import csv
 
@@ -22,7 +22,7 @@ def overheads_function():
         List = []
         Highest = []
 
-        #Append the empty lists while sorting the numbers in descending order
+        #Create a loop to append the new empty lists while sorting the numbers in descending order
         for row in reader:
             List.append([float(row[1]),row[0]]) #Change numerical values to a float
             List.sort(reverse=True)
@@ -31,8 +31,8 @@ def overheads_function():
         Highest.append(List[0])
 
     #Create a file path which the text and numbers will be entered into
-        Main_Filepath = Path.cwd()/"Summary_report.txt"
-        with Main_Filepath.open(mode = "w", encoding= "UTF-8") as file:
+        Overheads_Filepath = Path.cwd()/"Summary_report.txt"
+        with Overheads_Filepath.open(mode = "a", encoding= "UTF-8") as file:
 
     #Use "f-string" to write out the highest overhead with text
             file.write(f"[HIGHEST OVERHEADS] {Highest[0][1]}: {Highest[0][0]}%")
