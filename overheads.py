@@ -1,6 +1,5 @@
 #Create the function for overheads
 def overheads_function():
-
     """
     - This function is used to filter out the highest overhead percentage
     - No parameters is required for this function
@@ -28,13 +27,11 @@ def overheads_function():
 
     #Create a file path which the text and numbers will be entered into
         Overheads_Filepath = Path.cwd()/"Summary_report.txt"
-        with Overheads_Filepath.open(mode = "a", encoding= "UTF-8") as file:
+        with Overheads_Filepath.open(mode = "w", encoding= "UTF-8") as file: #Mode will be "w"
 
     #Use "f-string" to write out the highest overhead with text
-            file.write(f"[HIGHEST OVERHEADS] {List[0][1]}: {List[0][0]}%")
+            file.write(f"[HIGHEST OVERHEADS] {List[0][1]}: {List[0][0]}%\n")
 
-#Execute the function
-overheads_function()
 
 
 
